@@ -1,0 +1,54 @@
+# docker-compose up
+
+version: '2'
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: smartgov
+      POSTGRES_PASSWORD: smartgov
+      PGDATA: /data/postgres
+    volumes:
+      - ./data/db:/data/db
+    ports:
+      - "5432:5432"
+      # - "3000:3000"
+    # networks:
+    #   - db
+    restart: unless-stopped
+
+  mongo:
+    image: mongo:3.4
+    volumes:
+      - ./data:/data/db/mongo
+    ports:
+      - "27017:27017"
+
+  pgadmin:
+    links:
+      - db:db
+    image: fenglc/pgadmin4
+    volumes:
+       - ./data/pgadmin:/root/.pgadmin
+    ports:
+      - "5050:5050"
+    # networks:
+    #   - db
+    restart: unless-stopped
+
+  web:
+    build: .
+    ports:
+     - "3000:3000"
+    # network_mode: service:db
+    environment:
+     - POSTGRES_URI=postgres://smartgov:smartgov@172.20.0.2:5432/smartgov
+    links:
+     - db
+     - mongo
+    depends_on:
+     - db
+     - mongo
+    volumes:
+     - .:/starter
+     - /starter/node_modules
