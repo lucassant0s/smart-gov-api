@@ -13,7 +13,7 @@ module.exports = {
       }], {});
     */
     return queryInterface.bulkInsert('Secretaries', [{
-      prefecture_id: 2,
+      prefecture_id: 1,
       name: 'SMES',
       responsible_body: 'SMES',
       responsible_manager: 'Marcelo',
