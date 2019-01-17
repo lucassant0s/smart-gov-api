@@ -12,29 +12,17 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
-    return queryInterface.bulkInsert('Sensors', [
+    return queryInterface.bulkInsert('Rules', [
       {
-        name: 'Sensor1',
-        floor: '0 Andar',
-        edifice_id: 1,
+        name: 'admin',
         createdAt: new Date(), updatedAt: new Date()
       },
       {
-        name: 'Sensor2',
-        floor: '0 Andar',
-        edifice_id: 1,
+        name: 'manager',
         createdAt: new Date(), updatedAt: new Date()
       },
       {
-        name: 'Sensor3',
-        floor: '0 Andar',
-        edifice_id: 1,
-        createdAt: new Date(), updatedAt: new Date()
-      },
-      {
-        name: 'Sensor4',
-        floor: '0 Andar',
-        edifice_id: 1,
+        name: 'user',
         createdAt: new Date(), updatedAt: new Date()
       }
     ], {});
@@ -48,8 +36,5 @@ module.exports = {
       Example:
       return queryInterface.bulkDelete('People', null, {});
     */
-   queryInterface.bulkDelete('Prefectures', null, {});
-   queryInterface.bulkDelete('Secretaries', null, {});
-   return queryInterface.bulkDelete('Edifices', null, {});
   }
 };

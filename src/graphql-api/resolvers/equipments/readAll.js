@@ -14,7 +14,6 @@ export default async (_, args, context) => {
     });
     edifices[0].children = sensors;
     secretaries[0].children = edifices;
-    console.log({ secretaries });
     return secretaries;
   } catch(error) {
     throw new Error(error);
