@@ -14,24 +14,28 @@ module.exports = {
     */
     return queryInterface.bulkInsert('Sensors', [
       {
+        id: 1,
         name: 'Sensor1',
         floor: '0 Andar',
         edifice_id: 3,
         createdAt: new Date(), updatedAt: new Date()
       },
       {
+        id: 2,
         name: 'Sensor2',
         floor: '0 Andar',
         edifice_id: 3,
         createdAt: new Date(), updatedAt: new Date()
       },
       {
+        id: 3,
         name: 'Sensor3',
         floor: '0 Andar',
         edifice_id: 3,
         createdAt: new Date(), updatedAt: new Date()
       },
       {
+        id: 4,
         name: 'Sensor4',
         floor: '0 Andar',
         edifice_id: 3,
