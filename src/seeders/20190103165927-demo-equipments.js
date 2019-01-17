@@ -16,25 +16,25 @@ module.exports = {
       {
         name: 'Sensor1',
         floor: '0 Andar',
-        edifice_id: 1,
+        edifice_id: 2,
         createdAt: new Date(), updatedAt: new Date()
       },
       {
         name: 'Sensor2',
         floor: '0 Andar',
-        edifice_id: 1,
+        edifice_id: 2,
         createdAt: new Date(), updatedAt: new Date()
       },
       {
         name: 'Sensor3',
         floor: '0 Andar',
-        edifice_id: 1,
+        edifice_id: 2,
         createdAt: new Date(), updatedAt: new Date()
       },
       {
         name: 'Sensor4',
         floor: '0 Andar',
-        edifice_id: 1,
+        edifice_id: 2,
         createdAt: new Date(), updatedAt: new Date()
       }
     ], {});
