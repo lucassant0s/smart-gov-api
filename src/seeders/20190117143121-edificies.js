@@ -13,7 +13,7 @@ module.exports = {
       }], {});
     */
     return queryInterface.bulkInsert('Edifices', [{
-      secretary_id: 1,
+      secretary_id: 2,
       name: 'Escola Metodista',
       createdAt: new Date(), updatedAt: new Date()
     }], {});
